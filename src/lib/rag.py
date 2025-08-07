@@ -34,7 +34,7 @@ from pydantic import BaseModel, Field
 
 from lib.core import ChatSettings
 
-LLMS = Enum("LLMS", ["OPENAI", "ANTROPHIC", "OLLAMA"])
+LLMS = Enum("LLMS", ["OPENAI", "ANTHROPIC", "OLLAMA"])
 EMBEDDINGS = Enum("EMBEDDINGS", ["openai", "huggingface"])
 
 class UptatableChatHistory(BaseChatMessageHistory, BaseModel):
@@ -76,7 +76,7 @@ class Rag:
         self.output_formatter = output_formatter
         self.llm_functions = {
             LLMS.OPENAI: ChatOpenAI,
-            LLMS.ANTROPHIC: ChatAnthropic,
+            LLMS.ANTHROPIC: ChatAnthropic,
             LLMS.OLLAMA: ChatOllama,
         }
         self.contextualize_prompt = contextualize_prompt or (

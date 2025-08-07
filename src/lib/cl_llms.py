@@ -10,8 +10,8 @@ def get_chat_profiles():
             icon="https://picsum.photos/200",
         ),
         cl.ChatProfile(
-            name="Antrophic",
-            markdown_description="Antrophic GPT",
+            name="Anthropic",
+            markdown_description="Anthropic GPT",
             icon="https://picsum.photos/250",
         ),
         cl.ChatProfile(
